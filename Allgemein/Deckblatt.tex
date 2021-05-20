@@ -1,0 +1,36 @@
+% !TEX root = ../main.tex
+
+\thispagestyle{plain}
+
+% geometrie nur für deckblatt
+\newgeometry{left=35mm,right=35mm,top=30mm,bottom=50mm, bindingoffset=0mm}
+\begin{titlepage}
+	\begin{center}
+		\includegraphics[height=3cm]{\logo}\\[2ex]
+		
+		\huge{\textsc{\textbf{\titel}}}\\[4ex]
+		\LARGE{\textbf{\untertitel}}\\[1ex]
+		
+		\vspace{19ex}
+		
+		\normalsize
+		\begin{tabular}[c]{l l}
+			 %abgegeben von:	 & \autor\\[1.2ex]
+			 Matrikelnummer: & \matrikelnr\\[1.2ex]
+			 
+			 Bearbeitungszeitraum: & \quad \datum\\[1.2ex]
+			 Ort: & \quad \ort\\[1.2ex]
+		\end{tabular}
+		
+		\copyright\ \jahr\\[1.5ex]
+	
+	\end{center}
+	
+	\singlespacing
+	\small
+	\noindent Dieses Werk einschließlich seiner Teile ist \textbf{urheberrechtlich geschützt}. Jede Verwertung außerhalb der engen Grenzen des Urheberrechtgesetzes ist ohne Zustimmung des Autors unzulässig und strafbar. Das gilt insbesondere für Vervielfältigungen, Übersetzungen, Mikroverfilmungen sowie die Einspeicherung und Verarbeitung in elektronischen Systemen.
+
+\end{titlepage}
+
+% geometrie zurücksetzen
+\restoregeometry 

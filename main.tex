@@ -1,0 +1,51 @@
+
+
+\input{Meta}
+\input{Allgemein/Packages}
+\input{Allgemein/Seitenstil}
+% Worttrennung für unbekannte Wörter
+\input{Allgemein/Trennung}
+
+% Literaturverzeichnis
+\addbibresource{Literatur.bib}
+
+\begin{document}
+
+\pagenumbering{Roman}
+\include{Allgemein/Deckblatt}
+\cleardoublepage
+
+
+% Inhsltsverzeichnis
+\tableofcontents
+
+% Abkürzungsverzeichnis
+\include{Abkuerzungen}
+
+
+% Abbildungsverzeichnis
+%\listoffigures
+
+% Verzeichnis Programmausschnitte
+%\renewcommand\listoflistingscaption{Verzeichnis der Programmausschnitte}
+%\listoflistings
+
+% Tabellenverzeichnis
+%\listoftables
+%\cleardoublepage
+
+
+\pagenumbering{arabic}
+\include{Inhalt}
+
+
+% Literaturverzeichnis
+\printbibliography
+\newpage
+
+% Anhang
+%\appendix % Nummerierung ändern
+%\pagenumbering{alph}
+%\include{./Inhalt/Anhang/Anhang}
+
+\end{document} 
