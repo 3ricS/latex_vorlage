@@ -7,11 +7,9 @@
 \subsection{Überschrift 2}
 
 % Code Listing
-\begin{listing}
-	\caption{Caption}
-	\inputminted[
-		firstline=0,
-		lastline=100
-	]{c}
-	{path/to/file.c}
-\end{listing}
+\inputminted[
+	firstline=0,
+	lastline=100
+]{c}
+{path/to/file.c}
+\captionof{listing}{Caption of Code\label{code}}
