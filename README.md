@@ -1,4 +1,5 @@
 # Vorlage für LaTeX
+Dies ist eine Latex-Vorlage für wissenschaftliche Arbeiten.
 
 ## Systemvoraussetzungen
 Python sowie das Paket `pygments` muss zur besseren Anzeige von Code installiert sein (Installation: siehe unten).
@@ -25,9 +26,9 @@ Um das Paket verwenden zu können, wird Python 2.7.X und das Python-Paket pygmen
 4. Den Zugriff auf externe Programme für den Compiler ````-shell-escape```` erlauben.
     * in Den Einstellungen von TexStudio unter dem Menüpunkt **Befehle** den Befehlt für PdfLaTeX mit ````-shell-escape```` ergänzen. Aus dem Standard Befehl ```pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex``` wird dann ```pdflatex.exe -shell-escape -synctex=1 -interaction=nonstopmode %.tex```
 
-# Programme zur Bearbeitung
+## Programme zur Bearbeitung
 Die Vorlage wurde mit [LaTeX](https://www.latex-project.org/) erstellt.
-Als Editor kann [TeXstudio](https://www.texstudio.org/) genutzt werden. Hier müssen die Standarteinstellungen des Compilers
+Als Editor kann [TeXstudio](https://www.texstudio.org/) genutzt werden. Hier müssen die Standardeinstellungen des Compilers
 des Literaturverzeichnisses auf biber.exe umgestellt werden.
 
 Zur grafischen Bearbeitung des Literturverzeichnisses kann [JabRef](https://www.jabref.org/) genutzt werden.
