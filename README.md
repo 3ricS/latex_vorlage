@@ -1,22 +1,18 @@
 # Vorlage für LaTeX
 
-## Form
-Gemäß Vorlesung „Wissenschaftliches Arbeiten“.
+## Systemvoraussetzungen
+Python sowie das Paket `pygments` muss zur besseren Anzeige von Code installiert sein (Installation: siehe unten).
 
-# Programme
-Die Vorlage wurde mit [LaTeX](https://www.latex-project.org/) erstellt.
-Als Editor kann [TeXstudio](https://www.texstudio.org/) genutzt werden. Hier müssen die Standarteinstellungen des Compilers
-des Literaturverzeichnisses auf biber.exe umgestellt werden.
+Falls eine minimalistische Version mit weniger Funktionen ausreicht, wird kein Python benötigt. Dazu muss mittels auf den Branch `minimal` gewechselt werden:
+```
+git checkout -b minimal
+```
 
-Zur grafischen Bearbeitung des Literturverzeichnisses kann [JabRef](https://www.jabref.org/) genutzt werden.
-
-
-# Benötigte Latex Einstellungen
-## Bibtex
+### Bibtex
 Für das Literaturverzeichniss wird Bibtex in Verbindung mit biber genutzt.
 In den Einstellungen vom Texstudio muss unter dem Menüpunkt **Erzeugung** das Standard Bibliografieprogramm auf biber umgestellt werden.
 
-## minted
+### minted
 Für die deutlich bessere Einbindung und Syntaxhervorhebung von Quellcode wird das Paket [minted](https://github.com/gpoore/minted) verwendet.
 Um das Paket verwenden zu können, wird Python 2.7.X und das Python-Paket pygments benötigt.
 
@@ -28,3 +24,10 @@ Um das Paket verwenden zu können, wird Python 2.7.X und das Python-Paket pygmen
     * ```pip install pygments```
 4. Den Zugriff auf externe Programme für den Compiler ````-shell-escape```` erlauben.
     * in Den Einstellungen von TexStudio unter dem Menüpunkt **Befehle** den Befehlt für PdfLaTeX mit ````-shell-escape```` ergänzen. Aus dem Standard Befehl ```pdflatex.exe -synctex=1 -interaction=nonstopmode %.tex``` wird dann ```pdflatex.exe -shell-escape -synctex=1 -interaction=nonstopmode %.tex```
+
+# Programme zur Bearbeitung
+Die Vorlage wurde mit [LaTeX](https://www.latex-project.org/) erstellt.
+Als Editor kann [TeXstudio](https://www.texstudio.org/) genutzt werden. Hier müssen die Standarteinstellungen des Compilers
+des Literaturverzeichnisses auf biber.exe umgestellt werden.
+
+Zur grafischen Bearbeitung des Literturverzeichnisses kann [JabRef](https://www.jabref.org/) genutzt werden.
