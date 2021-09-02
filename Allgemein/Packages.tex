@@ -83,7 +83,7 @@ ilines				% Trennlinie linksbündig ausrichten
 \graphicspath{{Bilder/}} % Dort liegen die Bilder des Dokuments
 
 % binde vectorgrafiken als pdf ein
-\usepackage{pdfpages}
+%\usepackage{pdfpages}
 
 % Zum Umfließen von Bildern -------------------------------------------------
 \usepackage{floatflt}
@@ -129,85 +129,11 @@ ilines				% Trennlinie linksbündig ausrichten
 % ===========================================================================
 \usepackage{listings}
 
-% see https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
-% to use:
-%
-% ==BEISPIEL ANFANG==
-%\begin{listing}[h]
-%	\caption{Python Test Code} 
-%	\label{lst:the-code2}
-%	\begin{minted}[gobble=2] % entferne die Einrückung von x
-%		{python}
-%		print("hello, world")
-%	\end{minted}
-%\end{listing}
-% --------------------------------------------------------------------------
-% um Dateien zu importieren:
-%\begin{listing}
-%	\caption{Aufbau Initialisierungsdatei}
-%	\label{lst:aufbauInitialisierungsdatei}
-%	\inputminted[
-%		firstline=191,
-%		lastline=239,
-%	]{python}
-%		{Listings/mail.py}
-%\end{listing}
-% um lange Dateien zu importieren (mit Seitenumbruch)
-%\begingroup
-%\captionsetup{type=listing}
-%\inputminted[
-%	firstline=191,
-%	lastline=239
-%]{python}
-%{Listings/mail.py}
-%\captionof{listing}{Facade\label{lst:mailFacade}}
-%\endgroup
-% ==BEISPIEL ENDE==
-\usepackage[
-	cache=false,	% cache kommt oft zu fehlern
-	chapter			% Listing Nummern Beginnen mit Kapitelnummern
-	]{minted}
-	
-% mögliche styles mit "$ pygmentize -L styles" in Kommandozeile
-\usemintedstyle{default}
-
-\definecolor{mintedbackground}{rgb}{0.95,0.95,0.95}
-
-\setminted{
-	breaklines, 			% Breche zu lamge Zeilen um
-	breakafter=d,			% Breche zu lange zeilen um
-	frame=single,			% Kasten um den Code optionen: (none | leftline | topline | bottomline | lines | single)
-	framesep=2mm,			% Abstand zwischen oberer und unterer Trennlinie
-	baselinestretch=1.2,	% Zeilenabstand
-	tabsize=4, 				% leerzeichen für Tab.
-	bgcolor=mintedbackground,		% Hintergrundfarbe
-	fontsize=\footnotesize,	% Schriftgröße
-	linenos=true,			% Aktiviere Zeilennummern
-}
-
 % mache autoref auch für mind verfügbar
 \providecommand*{\listingautorefname}{Listing}
 
 % https://github.com/gpoore/minted/issues/22
 \usepackage{scrhack}
-
-% requirements for minted
-\usepackage{keyval}
-\usepackage{kvoptions}
-\usepackage{fancyvrb}
-\usepackage{fvextra}
-\usepackage{upquote}
-\usepackage{float}
-\usepackage{ifthen}
-\usepackage{calc}
-\usepackage{ifplatform}
-\usepackage{pdftexcmds}
-\usepackage{etoolbox}
-\usepackage{xstring}
-\usepackage{xcolor}
-\usepackage{lineno}
-\usepackage{framed}
-\usepackage{shellesc}
 
 % ===========================================================================
 % Programmcode Listings
@@ -297,9 +223,6 @@ ilines				% Trennlinie linksbündig ausrichten
 % PDF-Optionen ende
 % ===========================================================================
 
-% Zum besseren referenzieren auf----------------- ---------------------------
-\usepackage[german]{varioref}
-\def\myref#1{\autoref{#1}\vpageref[]{#1}}
 
 
 % Zum fortlaufenden Durchnummerieren der Fußnoten ---------------------------
@@ -307,13 +230,8 @@ ilines				% Trennlinie linksbündig ausrichten
 
 
 % für lange Tabellen
-\usepackage{longtable}
-\usepackage{array}
 \usepackage{ragged2e}
 \usepackage{lscape}
-
-% Spaltendefinition rechtsbündig mit definierter Breite ---------------------
-\newcolumntype{d}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
 
 % Formatierung von Listen ändern
 \usepackage{paralist}
@@ -339,10 +257,6 @@ ilines				% Trennlinie linksbündig ausrichten
 
 \usepackage{tikz}
 
-% Package fuer CSV-Dateien --------------------------------------------------
-% https://texblog.org/2012/05/30/generate-latex-tables-from-csv-files-excel/
-\usepackage{csvsimple} 
-\usepackage{tabularx} %für X-Spalten und tabularx-Umgebung
 % ===========================================================================
 % Diagramme ende
 % ===========================================================================
@@ -353,13 +267,6 @@ ilines				% Trennlinie linksbündig ausrichten
 %\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
 \usepackage{lipsum}                     % Dummytext
 \usepackage{xargs}                      % Use more than one optional parameter in a new commands
-
-\usepackage[
-	colorinlistoftodos,
-	prependcaption,
-	textsize=tiny
-]{todonotes}
-
 
 
 
@@ -387,8 +294,7 @@ ilines				% Trennlinie linksbündig ausrichten
 \fi
 % Ende der Unterscheidung
 \usepackage{amsmath,amssymb}
-\usepackage{multicol,wrapfig,caption}
-\captionsetup{format=plain,justification=centering,labelsep=newline,singlelinecheck=false,labelfont=bf,font=small}
+
 \usepackage{mathptmx,charter,helvet,courier}
 
 
@@ -399,20 +305,6 @@ ilines				% Trennlinie linksbündig ausrichten
 
 % Mehrzeilige Kommentare
 \usepackage{comment}
-
-
-% Si-Einheiten
-\usepackage[separate-uncertainty, exponent-product = \cdot]{siunitx}
-\sisetup{
-	exponent-product = \cdot,	% \cdot statt x als Multiplikationzeichen
-	locale = DE,
-	separate-uncertainty
-}
-
-% Leerzeichen nach Makro -------------------------------------------------------
-\usepackage{xspace} % sorgt dafür, dass Leerzeichen hinter parameterlosen Makros nicht als Makroendezeichen interpretiert werden
-
-
 
 
 
